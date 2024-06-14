@@ -1,0 +1,1 @@
+enum SalePurchesType { box, kilogram }
