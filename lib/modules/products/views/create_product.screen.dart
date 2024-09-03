@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:cashir/modules/products/controllers/create_product.controller.dart';
 import 'package:cashir/modules/products/models/product.model.dart';
 import 'package:cashir/shared/models/sale_purches_type.enum.dart';
@@ -31,7 +29,7 @@ class CreateProductScreen extends StatelessWidget {
       validators: [Validators.required, Validators.number],
     ),
     // "category_id": FormControl<String>(validators: [Validators.required]),
-    "image": FormControl<List<Uint8List>>(validators: []),
+    "images": FormControl<List<String>>(validators: []),
     "barcode": FormControl<String>(),
     "salePurchesType": FormControl<String>(
       value: SalePurchesType.box.name,
@@ -41,6 +39,8 @@ class CreateProductScreen extends StatelessWidget {
       validators: [Validators.required, Validators.number],
     ),
   });
+
+  final images = FormControl();
 
   CreateProductScreen({super.key});
 
@@ -86,8 +86,8 @@ class CreateProductScreen extends StatelessWidget {
               // TextInput(title: "category".tr, formControlName: "category_id"),
               const SizedBox(height: 20),
               FileInput(
-                label: "image".tr,
-                formControlName: "image",
+                label: "images".tr,
+                formControl: images,
                 isMultiple: true,
               ),
               const SizedBox(height: 20),

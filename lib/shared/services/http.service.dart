@@ -110,8 +110,12 @@ class HttpService {
 
         for (var entity in body.entries) {
           if (entity.value is File) {
-            newBody[entity.key] = await MultipartFile.fromFile(entity.value);
+            newBody[entity.key] =
+                await MultipartFile.fromFile(entity.value.path);
           } else if (entity.value is List<File>) {
+            newBody[entity.key] = entity.value
+                .map((file) => MultipartFile.fromFileSync(file.path))
+                .toList();
           } else {
             newBody[entity.key] = entity.value;
           }
@@ -135,6 +139,7 @@ class HttpService {
         data: formData,
       );
 
+      print(res.data);
       return AppResponse(
         statusCode: res.statusCode!,
         data: res.data,
