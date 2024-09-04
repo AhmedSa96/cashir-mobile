@@ -50,7 +50,6 @@ class _EditSupplierScreenState extends State<EditSupplierScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Edit Supplier".trParams({"id": Get.parameters["id"]!}),
-      showBottomBar: false,
       child: Wrapper(
         child: ReactiveForm(
           formGroup: form,

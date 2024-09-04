@@ -53,7 +53,6 @@ class _EditClientScreenState extends State<EditClientScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Edit Client".trParams({"id": Get.parameters["id"]!}),
-      showBottomBar: false,
       child: Wrapper(
         child: ReactiveForm(
           formGroup: form,

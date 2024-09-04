@@ -55,7 +55,6 @@ class _CreateSaleScreenState extends State<CreateSaleScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Add Sale".tr,
-      showBottomBar: false,
       child: ReactiveForm(
         formGroup: form,
         child: Column(

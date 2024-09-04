@@ -127,7 +127,9 @@ class _FileInputState extends State<FileInput> {
                                     control.value!.indexOf(e),
                                   );
                                 },
-                                onUpload: (url) {},
+                                onUpload: (url) {
+                                  // TODO: implement upload file
+                                },
                               ),
                             ),
                         ],
@@ -146,8 +148,11 @@ class FilePickerBottomSheet extends StatelessWidget {
   final FormControl formControl;
   final bool isMultiple;
 
-  const FilePickerBottomSheet(
-      {required this.formControl, required this.isMultiple, super.key});
+  const FilePickerBottomSheet({
+    required this.formControl,
+    required this.isMultiple,
+    super.key,
+  });
 
   pickImage(ImageSource source, BuildContext context) async {
     ImagePicker picker = ImagePicker();

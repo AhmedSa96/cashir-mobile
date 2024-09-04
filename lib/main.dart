@@ -3,7 +3,7 @@ import 'package:cashir/shared/constants/colors.dart' as app_colors;
 import 'package:cashir/shared/setup_di.dart';
 import 'package:cashir/shared/translations/languages.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+// import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -37,8 +37,8 @@ class MyApp extends StatelessWidget {
       fallbackLocale: const Locale(Languages.defaultLanguageKey),
       localizationsDelegates: const [
         RefreshLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate
+        // GlobalWidgetsLocalizations.delegate,
+        // GlobalMaterialLocalizations.delegate
       ],
       // theme config
       theme: ThemeData(

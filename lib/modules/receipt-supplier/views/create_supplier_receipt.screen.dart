@@ -53,7 +53,6 @@ class CreateSupplierReceiptScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Create Supplier Receipt".tr,
-      showBottomBar: false,
       child: ReactiveForm(
         formGroup: form,
         child: ListView(

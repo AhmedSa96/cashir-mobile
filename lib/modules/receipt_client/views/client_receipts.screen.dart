@@ -37,7 +37,6 @@ class _ClientReceiptsScreenState extends State<ClientReceiptsScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Client Receipts".tr,
-      showBottomBar: false,
       actions: [_FiltersButton()],
       floatingActionButton: FloatingActionButton(
         backgroundColor: app_colors.primary,

@@ -37,7 +37,6 @@ class _SupplierReceiptsScreenState extends State<SupplierReceiptsScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Supplier Receipts".tr,
-      showBottomBar: false,
       actions: [
         _FiltersButton(),
       ],

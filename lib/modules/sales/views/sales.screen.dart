@@ -34,7 +34,6 @@ class _SalesScreenState extends State<SalesScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Sales".tr,
-      showBottomBar: false,
       actions: [
         _FiltersButton(),
       ],

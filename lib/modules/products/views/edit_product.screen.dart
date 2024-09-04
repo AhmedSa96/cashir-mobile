@@ -88,7 +88,6 @@ class _EditProductScreenState extends State<EditProductScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Edit Product".trParams({"id": Get.parameters['id']!}),
-      showBottomBar: false,
       child: Wrapper(
         child: ReactiveForm(
           formGroup: form,

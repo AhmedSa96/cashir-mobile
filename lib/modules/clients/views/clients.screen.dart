@@ -36,7 +36,6 @@ class _ClientsScreenState extends State<ClientsScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Clients".tr,
-      showBottomBar: false,
       floatingActionButton: FloatingActionButton(
         backgroundColor: colors.primary,
         foregroundColor: Colors.white,

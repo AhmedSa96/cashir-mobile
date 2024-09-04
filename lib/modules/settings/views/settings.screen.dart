@@ -17,7 +17,6 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Settings".tr,
-      showBottomBar: false,
       child: ListView(
         children: [
           const SizedBox(height: 24),

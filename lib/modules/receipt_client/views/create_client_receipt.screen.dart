@@ -53,7 +53,6 @@ class CreateClientReceiptScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Create Client Receipt".tr,
-      showBottomBar: false,
       child: ReactiveForm(
         formGroup: form,
         child: ListView(

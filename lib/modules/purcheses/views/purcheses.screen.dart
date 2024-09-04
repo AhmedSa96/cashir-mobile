@@ -34,7 +34,6 @@ class _PurchesesScreenState extends State<PurchesesScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Purcheses".tr,
-      showBottomBar: false,
       actions: [
         _FiltersButton(),
       ],

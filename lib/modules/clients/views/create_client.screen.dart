@@ -35,7 +35,6 @@ class CreateClientScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Create Client".tr,
-      showBottomBar: false,
       child: Wrapper(
         child: ReactiveForm(
           formGroup: form,

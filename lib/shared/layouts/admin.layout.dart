@@ -1,5 +1,5 @@
 import 'package:cashir/modules/auth/controller/auth.controller.dart';
-import 'package:cashir/shared/controllers/layout.controller.dart';
+// import 'package:cashir/shared/controllers/layout.controller.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,14 +11,14 @@ class AdminLayout extends StatefulWidget {
   final Widget child;
   final Widget? floatingActionButton;
   final List<Widget>? actions;
-  final bool showBottomBar;
+  // final bool showBottomBar;
 
   const AdminLayout({
     required this.title,
     required this.child,
     this.floatingActionButton,
     this.actions,
-    this.showBottomBar = true,
+    // this.showBottomBar = true,
     super.key,
   });
 
@@ -35,25 +35,25 @@ class _AdminLayoutState extends State<AdminLayout> {
         title: Text(widget.title),
         actions: widget.actions,
       ),
-      bottomNavigationBar: widget.showBottomBar
-          ? BottomNavigationBar(
-              items: [
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.dashboard), label: "Dashboard".tr),
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.file_open), label: "Reports".tr),
-              ],
-              onTap: (index) {
-                final routesByIndex = {
-                  0: "/compony/dashboard",
-                  1: "/compony/reports"
-                };
+      // bottomNavigationBar: widget.showBottomBar
+      //     ? BottomNavigationBar(
+      //         items: [
+      //           BottomNavigationBarItem(
+      //               icon: const Icon(Icons.dashboard), label: "Dashboard".tr),
+      //           BottomNavigationBarItem(
+      //               icon: const Icon(Icons.file_open), label: "Reports".tr),
+      //         ],
+      //         onTap: (index) {
+      //           final routesByIndex = {
+      //             0: "/compony/dashboard",
+      //             1: "/compony/reports"
+      //           };
 
-                Get.offNamed(routesByIndex[index]!);
-              },
-              currentIndex: Get.find<LayoutController>().currentIndex,
-            )
-          : null,
+      //           Get.offNamed(routesByIndex[index]!);
+      //         },
+      //         currentIndex: Get.find<LayoutController>().currentIndex,
+      //       )
+      //     : null,
       body: StreamBuilder(
         stream: Connectivity().onConnectivityChanged,
         builder: (context, snapshot) {
@@ -192,14 +192,14 @@ class _MainMenu extends StatelessWidget {
                 Get.offNamed('/compony/supplier-receipts');
               },
             ),
-          if (_authController.isCompony())
-            ListTile(
-              title: Text("Reports".tr),
-              leading: const Icon(Icons.analytics, color: colors.primary),
-              onTap: () {
-                Get.offNamed('/compony/reports');
-              },
-            ),
+          // if (_authController.isCompony())
+          //   ListTile(
+          //     title: Text("Reports".tr),
+          //     leading: const Icon(Icons.analytics, color: colors.primary),
+          //     onTap: () {
+          //       Get.offNamed('/compony/reports');
+          //     },
+          //   ),
           if (_authController.isAdmin())
             ListTile(
               title: Text("System Constants".tr),

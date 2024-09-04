@@ -31,7 +31,6 @@ class CreateSupplierScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Create Supplier".tr,
-      showBottomBar: false,
       child: Wrapper(
         child: ReactiveForm(
           formGroup: form,

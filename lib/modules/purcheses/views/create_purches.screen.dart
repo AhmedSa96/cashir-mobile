@@ -55,7 +55,6 @@ class _CreatePurchesScreenState extends State<CreatePurchesScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Add Purches".tr,
-      showBottomBar: false,
       child: ReactiveForm(
         formGroup: form,
         child: Column(

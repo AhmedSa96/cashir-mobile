@@ -35,7 +35,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Products".tr,
-      showBottomBar: false,
       floatingActionButton: FloatingActionButton(
         backgroundColor: colors.primary,
         foregroundColor: Colors.white,

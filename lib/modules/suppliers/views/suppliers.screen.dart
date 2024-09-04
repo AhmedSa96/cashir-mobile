@@ -36,7 +36,6 @@ class _SuppliersScreenState extends State<SuppliersScreen> {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Suppliers".tr,
-      showBottomBar: false,
       floatingActionButton: FloatingActionButton(
         backgroundColor: colors.primary,
         foregroundColor: Colors.white,

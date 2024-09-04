@@ -65,7 +65,6 @@ class CreateProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdminLayout(
       title: "Create Product".tr,
-      showBottomBar: false,
       child: Wrapper(
         child: ReactiveForm(
           formGroup: form,
